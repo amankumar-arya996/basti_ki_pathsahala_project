@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+
+</head>
+<body class="container mt-5">
+  <h2>Admin Dashboard - Applicants List</h2>
+  <% if (applicants.length === 0) { %>
+    <p>No applications yet.</p>
+  <% } else { %>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th><th>Email</th><th>Phone</th><th>College</th><th>Year</th><th>Reason</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% applicants.forEach(app => { %>
+          <tr>
+            <td><%= app.name %></td>
+            <td><%= app.email %></td>
+            <td><%= app.phone %></td>
+            <td><%= app.college %></td>
+            <td><%= app.year %></td>
+            <td><%= app.reason %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } %>
+</body>
+</html>
