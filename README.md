@@ -77,7 +77,7 @@ Go to: http://localhost:3000/admin?password=admin123
 You can change the password in the index.js file (look for ADMIN_PASSWORD).
 
 👀 Live Demo
-Not deployed — runs only on local environment.
+https://basti-ki-pathsahala-project.onrender.com/
 
 🧠 What I Learned
 Routing with Express
